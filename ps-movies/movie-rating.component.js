@@ -8,6 +8,8 @@
         bindings: { // Describe properties on controller instance
             value: "<" // value name is arbitrary
         },
+        // Override component
+        transclude: true,
         controllerAs: "vm",
         controller: function() {
             var vm = this;
