@@ -11,6 +11,8 @@
             // Just provide path and component name
             { path: "/list", component: "movieList", name: "List" },
             { path: "/about", component: "appAbout", name: "About" },
+            // Parameters
+            { path: "/detail/:id", component: "movieDetails", name: "Details"},
             // Redirect for all else to string literal for route, which takes user to movieList
             { path: "/**", redirectTo: ["List"] }
         ]
