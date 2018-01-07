@@ -2,7 +2,9 @@
   "name": "ng15",
   "version": "1.0.0",
   "description": "",
-  "dependencies": {},
+  "dependencies": {
+    "@uirouter/angularjs": "^1.0.12"
+  },
   "devDependencies": {
     "eslint": "2.5.3",
     "eslint-config-standard": "5.1.0",

@@ -1,0 +1,29 @@
+<nav class="navbar navbar-default navbar-inverse" class="container-fluid">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="#">At The Movies</a>
+        </div>
+        <ul class="nav navbar-nav navbar-left">
+            <li>
+                <a href="#/list">List</a>
+            </li>
+            <li>
+                <a href="#/about">About</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="container">
+    <!-- Instead of hard-coding, let router determine -->
+    <!-- <movie-list></movie-list> -->
+
+    <!-- No longer needed (old router) -->
+    <!-- <ng-view></ng-view> -->
+
+    <!-- Placeholder for router (where it will place components) -->
+    <ng-outlet></ng-outlet>
+
+
+
+</div>
