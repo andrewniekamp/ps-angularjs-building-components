@@ -38,13 +38,14 @@
             }
         };
 
+        // These are all nested inside of details/{id}/
         var overviewState = {
-            name: 'overview',
+            name: 'details.overview',
             url: '/overview',
             component: 'movieOverview'
         };
         var castState = {
-            name: 'cast',
+            name: 'details.cast',
             url: '/cast',
             component: 'movieCast'
         };
