@@ -20,7 +20,13 @@
             <td>{{movie.title}}</td>
             <td>{{movie.length}}</td>
             <td>
-                <movie-rating value="movie.rating" max="5"></movie-rating>
+                <!-- AngularJS knows that movie is essentially a local variable here, and that value is from the component -->
+                <!-- Be sure to dasherize setRating -->
+                <movie-rating 
+                    value="movie.rating" 
+                    max="5" 
+                    set-rating="vm.setRating(movie, value)">
+                </movie-rating>
             </td>
             <td>
                 <button class="btn btn-default" ng-click="vm.upRating(movie)">

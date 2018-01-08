@@ -2,5 +2,5 @@
 <!-- Created an array in the controller, but can't repeat over empty array unless you track by index! -->
 <!-- Clicking +/- doens't update, need another lifecycle hook -->
 <span ng-repeat="entry in vm.entries track by $index">
-    <span class="glyphicon {{entry}}"></span>
+    <span ng-click="vm.setRating({ value: $index + 1 })" class="glyphicon {{entry}}"></span>
 </span>

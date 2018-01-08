@@ -17,7 +17,9 @@
         templateUrl: "/ps-movies/movie-rating.component.html",
         bindings: { // Describe properties on controller instance
             value: "<", // value name is arbitrary
-            max: "<"
+            max: "<",
+            // Should send event up to parent to update data instead of 2-way binding
+            setRating: "&"
         },
         controllerAs: "vm",
         controller: function() {

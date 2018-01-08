@@ -32,7 +32,11 @@
 
             // To route directly to a nested route
             // $state.go('details.director', { movieId: id });
-        },
+        };
+
+        vm.setRating = function(movie, newRating) {
+            movie.rating = newRating;
+        };
 
         vm.upRating = function(movie) {
             if (movie.rating < 5) {
