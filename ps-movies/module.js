@@ -1,4 +1,4 @@
-(function() {
+(function () {
     "use strict";
 
     // Save module in variable to configure below
@@ -9,9 +9,9 @@
         // "ngComponentRouter", <- another diff router
         "ui.router" // <- the one Cedrus uses
     ]);
-    
+
     // Configure routes
-    module.config(function($stateProvider) {
+    module.config(function ($stateProvider) {
 
         var listState = {
             name: 'list',
@@ -32,7 +32,7 @@
             resolve: {
                 // Service for movie
                 // Transitions has params so you can access and use for search
-                movie: function(movie, $transition$) {
+                movie: function (movie, $transition$) {
                     return movie.getMovie($transition$.params().movieId);
                 }
             }
@@ -42,7 +42,17 @@
         var overviewState = {
             name: 'details.overview',
             url: '/overview',
-            component: 'movieOverview'
+            component: 'movieOverview',
+            // Almost working, but not quite?
+            // resolve: {
+            //     movie: function ($stateParams) {
+            //         console.log($stateParams);
+            //         return {
+            //             name: "something",
+            //             id: $stateParams.movieId
+            //         };
+            //     }
+            // }
         };
         var castState = {
             name: 'details.cast',
@@ -54,7 +64,7 @@
             url: '/director',
             component: 'movieDirector'
         };
-        
+
         $stateProvider.state(listState);
         $stateProvider.state(aboutState);
         $stateProvider.state(detailsState);

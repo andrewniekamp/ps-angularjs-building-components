@@ -8,12 +8,18 @@
     });
 
     module.component("movieOverview", {
-        template: "This is the overview."
+        bindings: { movie: '<'},
+        template: "This is the overview for movie {{vm.movie.id}}.",
+        controllerAs: "vm"
     });
     module.component("movieCast", {
-        template: "This is info about the cast."
+        bindings: { movie: '<'},
+        template: "This is info about the cast for movie {{vm.movie.id}}.",
+        controllerAs: "vm"
     });
     module.component("movieDirector", {
-        template: "This is info about the director."
+        bindings: { movie: '<'},
+        template: "This is info about the director for movie {{vm.movie.id}}.",
+        controllerAs: "vm"
     });
 }());
