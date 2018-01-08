@@ -7,11 +7,11 @@
             <li>
                 <!-- <a href="#/list">List</a> -->
                 <!-- Uses array as more options are available, we're just using one -->
-                <a ng-link="['List']">List</a>
+                <a ui-sref="list" ui-sref-active="active">List</a>
             </li>
             <li>
                 <!-- <a href="#/about">About</a> -->
-                <a ng-link="['About']">About</a>
+                <a ui-sref="about" ui-sref-active="active">About</a>
             </li>
         </ul>
     </div>
@@ -25,7 +25,9 @@
     <!-- <ng-view></ng-view> -->
 
     <!-- Placeholder for router (where it will place components) -->
-    <ng-outlet></ng-outlet>
+    <!-- <ng-outlet></ng-outlet> -->
+
+    <ui-view></ui-view>
 
 
 

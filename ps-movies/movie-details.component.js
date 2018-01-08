@@ -2,6 +2,8 @@
     var module = angular.module("psMovies");
 
     module.component("movieDetails", {
-        templateUrl: "/ps-movies/movie-details.component.html"
+        bindings: { movie: '<' },
+        templateUrl: "/ps-movies/movie-details.component.html",
+        controllerAs: "vm"
     });
 }());

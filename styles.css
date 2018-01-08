@@ -6,3 +6,8 @@ body{
 .ng-cloak {
     display: none;
 }
+
+.active {
+	color: red !important;
+	font-weight: bolder;
+}

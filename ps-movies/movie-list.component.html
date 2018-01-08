@@ -34,7 +34,7 @@
                 </button>
 
                 <!-- Can pass in arguments for route params -->
-                <a ng-link="['Details', {id: movie.id}]" class="btn btn-default">
+                <a ui-sref="details({ movieId: movie.id })" class="btn btn-default">
                     <span class="glyphicon glyphicon-zoom-in"></span>
                 </a>
             </td>
