@@ -1,3 +1,13 @@
 <p>This is the details for the movie with ID: {{vm.movie.id}}</p>
 
-<p>No information yet!</p>
+<ul>
+    <li><a ui-sref="overview">Overview</a></li>
+    <li><a ui-sref="cast">Cast</a></li>
+    <li><a ui-sref="details.director">Director</a></li>
+</ul>
+
+<!-- Old router outlet to load more components based on URL -->
+<!-- <ng-outlet></ng-outlet> -->
+
+<!-- New router syntax -->
+<ui-view></ui-view>

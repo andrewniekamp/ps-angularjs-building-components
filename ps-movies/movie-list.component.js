@@ -12,7 +12,7 @@
         });
     }
 
-    function controller($http) {
+    function controller($http, $state) {
         var vm = this; // Alias this to vm (view model)
 
         vm.$onInit = function() {
@@ -20,6 +20,19 @@
                 vm.movies = movies; // Set movies returned from request
             });
         };
+
+        // Alternative to using service we did originally
+        vm.goTo = function(id) {
+            // This is for the other router
+            // vm.$stateProvider.state(["details", { id: id }]);
+            
+            // Not sure how to do it with ui-router
+            // console.log($state);
+            $state.go('details', { movieId: id });
+
+            // To route directly to a nested route
+            // $state.go('details.director', { movieId: id });
+        },
 
         vm.upRating = function(movie) {
             if (movie.rating < 5) {
@@ -45,6 +58,12 @@
         // template: "Hello from a component!",
         templateUrl: "/ps-movies/movie-list.component.html",
         controllerAs: "vm", // alias the $ctrl
-        controller: ["$http", controller], // Keeps component definition clean
+        controller: ["$http", "$state", controller], // Keeps component definition clean
+
+        // Binding for old router
+        // bindings: {
+        //     // We want the router associated with this component
+        //     "$stateProvider": "<" // will be an input
+        // }
     });
 }());

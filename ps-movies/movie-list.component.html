@@ -37,6 +37,9 @@
                 <a ui-sref="details({ movieId: movie.id })" class="btn btn-default">
                     <span class="glyphicon glyphicon-zoom-in"></span>
                 </a>
+                <button ng-click="vm.goTo(movie.id)">
+                    Details
+                </button>
             </td>
         </tr>
     </table>

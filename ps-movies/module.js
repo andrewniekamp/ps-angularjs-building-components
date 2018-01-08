@@ -37,10 +37,29 @@
                 }
             }
         };
+
+        var overviewState = {
+            name: 'overview',
+            url: '/overview',
+            component: 'movieOverview'
+        };
+        var castState = {
+            name: 'cast',
+            url: '/cast',
+            component: 'movieCast'
+        };
+        var directorState = {
+            name: 'details.director',
+            url: '/director',
+            component: 'movieDirector'
+        };
         
         $stateProvider.state(listState);
         $stateProvider.state(aboutState);
         $stateProvider.state(detailsState);
+        $stateProvider.state(overviewState);
+        $stateProvider.state(castState);
+        $stateProvider.state(directorState);
     });
 
     // Must register service with name of top level component for routing and navigation rules
